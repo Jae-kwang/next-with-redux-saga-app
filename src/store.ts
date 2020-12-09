@@ -6,7 +6,7 @@ import rootReducer from './reducers/rootReducer';
 import rootSaga from './sagas/rootSaga';
 
 export interface SagaStore extends Store {
-  sagaTask?: Task;
+  sagaTask: Task;
 }
 
 export const makeStore: MakeStore = () => {

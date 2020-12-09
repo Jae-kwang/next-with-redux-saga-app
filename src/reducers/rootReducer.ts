@@ -1,17 +1,12 @@
 import { combineReducers } from 'redux';
 import { HYDRATE } from 'next-redux-wrapper';
-import { IAction } from '../actions';
 import userReducer from './user';
-
-interface IStoreState {
-  user: object;
-}
 
 const combinedReducer = combineReducers({
   user: userReducer,
 });
 
-const rootReducer = (state: IStoreState, action: IAction) => {
+const rootReducer = (state: any, action: any) => {
   if (action.type === HYDRATE) {
     const nextState = {
       ...state,
@@ -24,3 +19,5 @@ const rootReducer = (state: IStoreState, action: IAction) => {
 };
 
 export default rootReducer;
+
+export type RootState = ReturnType<typeof rootReducer>;

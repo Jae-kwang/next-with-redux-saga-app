@@ -1,7 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { userAction } from '../actions'
+import { RootState } from '../reducers/rootReducer';
 
-const useUser = () => useSelector((state) => ({
+const useUser = () => useSelector((state: RootState) => ({
   character: state.user.character,
   error: state.user.error,
   isFetchedOnServer: state.user.isFetchedOnServer,

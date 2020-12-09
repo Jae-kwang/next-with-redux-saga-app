@@ -2,13 +2,12 @@ import { USER_TYPES } from '../actions/actionTypes';
 import { put, takeEvery, call } from 'redux-saga/effects';
 import axios from 'axios';
 
-function* getUser(action) {
+function* getUser(action: any) {
   const { idx, isServer } = action.payload;
   const { data } = yield call(
     axios.get,
     `https://jsonplaceholder.typicode.com/users/${idx}`
   );
-
   const payload = {
     data,
     isServer,
