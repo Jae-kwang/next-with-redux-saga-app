@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { userAction } from '../actions'
-import { RootState } from '../reducers/rootReducer';
+import { userAction } from '../store/actions'
+import { RootState } from '../store/reducers/rootReducer';
+import Button from './Button'
 
 const useUser = () => useSelector((state: RootState) => ({
   character: state.user.character,
@@ -45,6 +46,7 @@ const UserInfo = () => {
         }
       `}</style>
       <button onClick={() => dispatch(userAction.getUserSaga({ idx:2, isServer : false }))}>get Another User</button>
+      <Button/>
     </div>
   )
 }

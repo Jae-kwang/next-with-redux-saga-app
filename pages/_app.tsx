@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppProps } from 'next/app'
-import { wrapper } from '../src/store';
+import { wrapper } from '~/store/store';
 
 const App = ({ Component, pageProps }: AppProps) => {
   return <Component {...pageProps} />;

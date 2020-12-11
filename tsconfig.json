@@ -47,6 +47,6 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx", "stories/components/button.stories.js"
   ]
 }

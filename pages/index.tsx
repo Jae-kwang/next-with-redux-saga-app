@@ -1,10 +1,10 @@
 import { NextPage } from 'next'
 import { END } from 'redux-saga';
-import { wrapper } from '../src/store';
+import { wrapper } from '~/store/store';
 import Link from 'next/link';
-import { userAction } from '../src/actions'
+import { userAction } from '~/store/actions'
 import UserInfo from '../src/components/userInfo'
-import { SagaStore } from '../src/store'
+import { SagaStore } from '~/store/store'
 
 const Index: NextPage = () => {
   return (
